@@ -1,0 +1,118 @@
+.center,
+.mensajes {
+    clear: both;
+    width: 60%;
+    margin: auto;
+    padding: 10px;
+}
+
+.mensajes {
+    text-align: center;
+}
+
+.titulo {
+    margin: auto;
+    text-align: center;
+}
+
+
+/* CSS ANDY */
+
+:root {
+    --num-columnas: 10;
+    --num-filas: 10;
+    --size: 60px;
+}
+
+#tablero {
+    display: grid;
+    grid-template-columns: repeat(var(--num-columnas), var(--size));
+    grid-template-rows: repeat(var(--num-filas), var(--size));
+}
+
+#tablero div {
+    cursor: pointer;
+    background-color: #BBBBBB;
+    border-left: 2px solid #D3D3D3;
+    border-top: 2px solid #D3D3D3;
+    border-right: 2px solid #A9A9A9;
+    border-bottom: 2px solid #A9A9A9;
+    text-align: center;
+    line-height: var(--size);
+}
+
+#tablero div.destapado {
+    font-family: "Lucida Console", "Courier New", Courier, monospace;
+    font-weight: bold;
+    border-left: 2px solid #D3D3D3;
+    border-top: 2px solid #D3D3D3;
+    border-right: 2px solid #A9A9A9;
+    border-bottom: 2px solid #A9A9A9;
+    text-shadow: 1px 1px 2px #999999;
+}
+
+#tablero div.display {
+    background-color: lightyellow;
+    color: black;
+    transform: rotateY(0deg);
+    transition: transform 0.6;
+}
+
+#tablero div.hide {
+    background-color: #BBBBBB;
+    border-left: 2px solid #D3D3D3;
+    border-top: 2px solid #D3D3D3;
+    border-right: 2px solid #A9A9A9;
+    border-bottom: 2px solid #A9A9A9;
+    text-align: center;
+    color: #BBBBBB;
+    line-height: var(--size);
+}
+
+#tablero div.matched {
+    background-color: lightgreen;
+}
+
+#tablero div.vacio {
+    /* Se utiliza este fondo en lugar de negro que se pide en el enunciado por motivos esteticos 
+   Agua, es decir, NO bomba*/
+    background-color: lightblue;
+    font-family: "Lucida Console", "Courier New", Courier, monospace;
+    font-weight: bold;
+    border-left: 1px solid #A9A9A9;
+    border-top: 1px solid #A9A9A9;
+    border-right: 1px solid #D3D3D3;
+    border-bottom: 1px solid #D3D3D3;
+    text-shadow: 1px 1px 2px #999999;
+}
+
+#tablero div.bomba {
+    background-color: lightcoral;
+    font-family: "Lucida Console", "Courier New", Courier, monospace;
+    color: black;
+    font-weight: 900;
+    border-left: 1px solid #A9A9A9;
+    border-top: 1px solid #A9A9A9;
+    border-right: 1px solid #D3D3D3;
+    border-bottom: 1px solid #D3D3D3;
+    text-shadow: 1px 1px 2px #999999;
+}
+
+.mensaje_error {
+    background-color: lightcoral;
+    font-weight: bold;
+}
+
+.mensaje_exito {
+    background-color: lightgreen;
+    font-weight: bold;
+}
+
+.mensaje_aviso {
+    background-color: rgb(253, 253, 95);
+}
+
+.bomba-detectada {
+    color: red;
+    font-weight: 900;
+}

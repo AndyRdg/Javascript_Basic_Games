@@ -1,0 +1,98 @@
+.center,
+.mensajes {
+    clear: both;
+    width: 60%;
+    margin: auto;
+    padding: 10px;
+}
+
+.mensajes {
+    text-align: center;
+}
+
+.titulo {
+    margin: auto;
+    text-align: center;
+}
+
+
+/* CSS ANDY */
+
+:root {
+    --num-columnas: 10;
+    --num-filas: 10;
+    --size: 32px;
+}
+
+#tablero {
+    display: grid;
+    grid-template-columns: repeat(var(--num-columnas), var(--size));
+    grid-template-rows: repeat(var(--num-filas), var(--size));
+}
+
+#tablero div {
+    background-color: #BBBBBB;
+    border-left: 2px solid #D3D3D3;
+    border-top: 2px solid #D3D3D3;
+    border-right: 2px solid #A9A9A9;
+    border-bottom: 2px solid #A9A9A9;
+    text-align: center;
+    line-height: var(--size);
+}
+
+#tablero div.destapado {
+    font-family: "Lucida Console", "Courier New", Courier, monospace;
+    font-weight: bold;
+    border-left: 1px solid #A9A9A9;
+    border-top: 1px solid #A9A9A9;
+    border-right: 1px solid #D3D3D3;
+    border-bottom: 1px solid #D3D3D3;
+    text-shadow: 1px 1px 2px #999999;
+}
+
+#tablero div.vacio {
+    /* Se utiliza este fondo en lugar de negro que se pide en el enunciado por motivos esteticos 
+   Agua, es decir, NO bomba*/
+    background-color: lightblue;
+    font-family: "Lucida Console", "Courier New", Courier, monospace;
+    font-weight: bold;
+    border-left: 1px solid #A9A9A9;
+    border-top: 1px solid #A9A9A9;
+    border-right: 1px solid #D3D3D3;
+    border-bottom: 1px solid #D3D3D3;
+    text-shadow: 1px 1px 2px #999999;
+}
+
+button {
+    padding: 10px;
+    margin: 10px;
+}
+
+button:hover {
+    background-color: cornflowerblue;
+}
+
+.azul {
+    background-color: blue;
+}
+
+.negro {
+    background-color: black;
+}
+
+.rojo {
+    background-color: red;
+}
+
+.verde {
+    background-color: green;
+}
+
+input:disabled {
+    border-left: 2px solid #D3D3D3;
+    border-top: 2px solid #D3D3D3;
+    border-right: 2px solid #A9A9A9;
+    border-bottom: 2px solid #A9A9A9;
+    text-align: center;
+    line-height: var(--size);
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Buscaminas en Javascript</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Tarea de DIW 6">
+    <meta name="keywords" content="">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="titulo">
+                <h1>MEMORIZA NUMEROS!</h1>
+                <p>Pulse empezar cuando este listo e introduzca el numero en la casilla correspondiente:</p>
+
+            </div>
+        </div>
+        <div>
+            <div class="center">
+
+                <form role="form">
+                    <p>
+                        <B>Dimensiones del tablero:</B>
+                    </p>
+                    <table>
+                        <tr>
+
+                            <label for="ancho">   Ancho:</label>
+                            <input type="number" class="form-control" min="2" id="ancho" placeholder="Introduce el ancho">
+
+
+                            <label for="alto">   Alto:</label>
+                            <input type="number" class="form-control" min="2" id="alto" placeholder="Introduce el alto">
+
+                        </tr>
+                        <br>
+                        <br>
+                        <tr>
+                            <button type="button" class="btn btn-default" id="pintar">Crear Tablero</button>
+                            <button type="button" class="btn btn-default" id="generar">Generar</button>
+                            <button type="button" class="btn btn-default" id="comenzar">Comenzar</button>
+                            <button type="button" class="btn btn-default" id="comprobar">Comprobar</button>
+                            <button type="button" class="btn btn-default" id="reiniciar">Reiniciar</button>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+
+            <div class="alert alert-info mensajes" id="mensaje">
+                <strong id="mensajetexto"></strong>
+            </div>
+
+            <div class="center">
+                <div id="tablero" class="tablero">
+
+                </div>
+            </div>
+
+
+        </div>
+        <script type="text/javascript" src="memoNumber.js"></script>
+
+</body>
+
+</html>

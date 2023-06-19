@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <title>Emparejar Cartas</title>
+</head>
+
+<body>
+    <h2>EMPAREJAR CARTAS: El juego</h2>
+    <br>
+    <button id="instrucciones">Instrucciones</button>
+    <div id="instruccionesBox"></div>
+    <br>
+
+    <form>
+        <p>
+            <B>Dimensiones del tablero:</B>
+        </p>
+        <table>
+            <tr>
+                <label for="ancho">   Ancho:</label><br>
+                <input type="number" class="form-control" min="2" id="ancho" placeholder="Introduce el ancho">
+                <br>
+
+                <label for="alto">   Alto:</label><br>
+                <input type="number" class="form-control" min="2" id="alto" placeholder="Introduce el alto">
+
+            </tr>
+            <br>
+            <br>
+            <tr>
+
+            </tr>
+        </table>
+    </form>
+    <button id="comenzar">Empezar</button>
+    <button id="reiniciar">Reiniciar</button>
+    <button id="fin">Finalizar Juego</button>
+    </>
+
+    <div class="center">
+        <div id="tablero" class="tablero">
+
+        </div>
+    </div>
+
+    <script src="matchCards.js"></script>
+
+</body>
+
+</html>

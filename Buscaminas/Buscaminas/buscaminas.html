@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Memoriza Numeros en Javascript</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Tarea de DIW 6">
+    <meta name="keywords" content="">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="titulo">
+                <h1>Memoriza Numeros en Javascript</h1>
+
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 row">
+            <div class="center">
+                <p class="lead"> En primer lugar debes generar el tablero indicando ancho y alto. A continuación trata de buscar la mina haciendo click sobre cualquier casilla. Los intentos irán decreciendo. Suerte!!!!</p>
+                <form role="form">
+                    <p>Dimensiones del tablero:</p>
+                    <div class="col-xs-3">
+                        <label for="ancho">Ancho:</label>
+                        <input type="number" class="form-control" min="2" id="ancho" placeholder="Introduce el ancho">
+                    </div>
+                    <div class="col-xs-3">
+                        <label for="alto">Alto:</label>
+                        <input type="number" class="form-control" min="2" id="alto" placeholder="Introduce el alto">
+                    </div>
+                    <div class="col-xs-2">
+                        <label for="intentos">Intentos restantes:</label>
+                        <input type="number" class="form-control" id="intentos" readonly>
+                    </div>
+                    <div class="col-xs-2">
+                        <label for="minas">Minas encontradas:</label>
+                        <input type="number" class="form-control" id="minas" value="0" readonly>
+                    </div>
+                    <!-- Se Incorpora Un nuevo campo para conocer las minas totales que hay en el tablero-->
+                    <div class="col-xs-2">
+                        <label for="minas">Minas Totales:</label>
+                        <input type="number" class="form-control" id="minasTotales" readonly>
+                    </div>
+                    <div class="col-xs-12">
+                        </br>
+                        <!-- Se incorpora nuevos botones para implementar Mostrar minas y Resolver Tablero-->
+                        <button type="button" id="pintar" class="btn btn-default">Pintar</button>
+                        <button type="button" id="mostrar" class="btn btn-default">Mostrar minas</button>
+                        <button type="button" id="rendirse" class="btn btn-default">Resolver Tablero</button>
+                        <button type="button" id="reiniciar" class="btn btn-default">Reiniciar</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="alert alert-info mensajes" id="mensaje">
+                <strong id="mensajetexto"></strong>
+            </div>
+            <div class="center">
+                <div id="tablero" class="tablero">
+
+                </div>
+            </div>
+
+
+        </div>
+        <script src="buscaminas.js"></script>
+</body>
+
+</html>
